@@ -1,0 +1,50 @@
+{
+	"type": "datasource",
+	"id": "akips-datasource",
+	"name": "AKiPS",
+	"metrics": true,
+	"annotations": true,
+	"backend": true,
+	"alerting": true,
+	"queryOptions": {
+		"minInterval": true
+	},
+	"executable": "akips-plugin",
+	"info": {
+		"description": "AKiPS Data Source",
+		"author": {
+			"name": "ECAD Labs"
+		},
+		"keywords": [
+			"akips"
+		],
+		"logos": {
+			"small": "img/logo.svg",
+			"large": "img/logo.svg"
+		},
+		"links": [
+			{
+				"name": "Website",
+				"url": "https://github.com/reddercode/akips-grafana"
+			},
+			{
+				"name": "License",
+				"url": "https://github.com/reddercode/akips-grafana/blob/master/LICENSE"
+			}
+		],
+		"screenshots": [],
+		"version": "%VERSION%",
+		"updated": "%TODAY%"
+	},
+	"dependencies": {
+		"grafanaVersion": "6.6.x",
+		"plugins": []
+	},
+	"includes": [
+		{
+			"type": "dashboard",
+			"name": "Device and interface stats",
+			"path": "dashboards/akips_stats.json"
+		}
+	]
+}
